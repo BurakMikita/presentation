@@ -1,0 +1,252 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>owasp</title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section>Presentation about OWASP top 10</section>
+			<section>
+				<section>What is OWASP</section>
+				<section>
+					<h4>Stands for abbreviation</h4>
+					<ul>
+						<li>Open</li>
+						<li>Web</li>
+						<li>Application</li>
+						<li>Security</li>
+						<li>Project</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>What does top 10 mean?</section>
+				<section>This is a rating of 10 most critical security concerns for web application.
+					<img data-src="./img/owasp-top10-list-2021-debricked-100.jpg" height="350" width="800" />
+				</section>
+				<section>
+					<img data-src="./img/image1.jpg" height="350" width="800" />
+				</section>
+
+			</section>
+			<section>
+				<section>A01:2021 – Broken Access Control
+					<img data-src="./img/kr-cyber-sec.jo.jpg" height="350" width="800" />
+				</section>
+				<section>Broken Access Control - when a user can perform operations that are
+					prohibited for him. These failures can lead to information opening or data loss.
+				</section>
+				<section>
+					<h4>Basic requirement to prevent</h4>
+					<ul>
+						<li>Except for public resources, deny by default. </li>
+						<li>User can't create, read, update, or delete any record.</li>
+						<li>Log access control failures, alert admins </li>
+						<li>Rate limit API and controller access</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					A02:2021 – Cryptographic Failures
+					<img data-src="./img/key.jpg" height="350" width="800" />
+				</section>
+
+				<section>Cryptographic Failures - lack of encryption or possible problems with encryption</section>
+				<section>
+					<h4>Basic requirement to prevent</h4>
+					<ul>
+						<li>Using a secure URL. </li>
+						<li>Using strong and unique passwords.</li>
+						<li>Encryption of all sensitive information that needs to be kept.</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					A03:2021 – Injection
+					<img data-src="./img/Injection_1.png" height="350" width="800" />
+				</section>
+
+				<section>Injection - A hacker injects a query or
+					command to insert data and forces the application to do something it was not designed to do.
+				</section>
+				<section>
+					<h4>Basic requirement to prevent</h4>
+					<ul>
+						<li>Use of a safer API that eliminates the use of an interpreter.</li>
+						<li>Use LIMIT and other SQL controls </li>
+						<li>Use positive server-side input validation.</li>
+					</ul>
+				</section>
+			</section>
+			</section>
+			<section>
+				<section>
+					A04:2021 – Insecure Design
+					<img data-src="./img/secure-data-transfer.png" height="400" width="800" />
+				</section>
+
+				<section>Insecure Design - representing various deficiencies expressed as “missing or ineffective
+					management design”.
+				</section>
+				<section>
+					<h4>Basic requirement to prevent</h4>
+					<ul>
+						<li>Limit resource consumption by a user or service..</li>
+						<li>Create and use a library of safe design patterns or prebuilt components </li>
+						<li>Integrate security language and controls in the user story.</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					A05:2021 – Security Misconfiguration
+					<img data-src="./img/899.jpg" height="400" width="800" />
+				</section>
+
+				<section>Security Misconfiguration - may include unintentionally exposed services or ports, outdated or
+					unpatched frameworks or stack
+				</section>
+				<section>
+					<h4>Basic requirement to prevent</h4>
+					<ul>
+						<li>Remove or do not install unused features and frameworks.</li>
+						<li>Sending security directives to clients, e.g., Security Headers.</li>
+						<li>An automated process to verify the effectiveness of the configurations and settings.</li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					A06:2021 – Vulnerable and Outdated Components
+				</section>
+
+				<section>Vulnerable and Outdated Components - outdated components refer to standard software that is
+					used to support an application, but which has
+					not been updated and is therefore at an “old” version known to contain vulnerabilities.
+				</section>
+				<section>
+					<h4>Basic requirement to prevent</h4>
+					<ul>
+						<li>Remove unused dependencies, unnecessary features, components, files.</li>
+						<li>Only obtain components from official sources over secure links. </li>
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					A07:2021 – Identification and Authentication Failures
+					<img data-src="./img/maxresdefault.jpg" height="350" width="800" />
+
+				</section>
+
+				<section> Identification and Authentication Failures - authentication is not implemented correctly, or
+					the application may
+					contain routes to sensitive data that were not properly protected by the authentication barrier
+				</section>
+				<section>
+					<h4>Basic requirement to prevent</h4>
+					<ul>
+						<li>Using multi-factor authentication</li>
+						<li>Add weak password checking </li>
+						<li>Limit failed login attempts</li>
+
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					A08:2021 – Software and Data Integrity Failures
+				</section>
+
+				<section> Software and Data Integrity Failures - relate to code and infrastructure that does not protect
+					against integrity violations.
+				</section>
+				<section>
+					<h4>Basic requirement to prevent</h4>
+					<ul>
+						<li>Use digital signatures or similar mechanisms</li>
+						<li>Ensure libraries and dependencies,
+							such as npm or Maven, are consuming trusted repositories. </li>
+						<li>Ensure that your CI/CD pipeline has proper segregation,
+							configuration, and access control to ensure the integrity of the code</li>
+
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					A09:2021 – Security Logging and Monitoring Failures
+				</section>
+
+				<section> Security Logging and Monitoring Failures -including whether a system correctly
+					audits security events such as logins and failed logins.
+				</section>
+				<section>
+					<h4>Basic requirement to prevent</h4>
+					<ul>
+						<li>Ensure log data is encoded correctly to prevent injections </li>
+						<li>DevSecOps teams should establish effective monitoring and alerting </li>
+						<li>Ensure that logs are generated in a format that log management </li>
+
+					</ul>
+				</section>
+			</section>
+			<section>
+				<section>
+					A10:2021 – Server-Side Request Forgery (SSRF)
+				</section>
+
+				<section> Server-Side Request Forgery - is a type of attack that allows an attacker to send requests from the server.
+
+
+				</section>
+				<section>
+					<h4>Basic requirement to prevent</h4>
+
+
+					<ul>
+						<li>Enforce the URL schema, port, and destination with a positive allow list</li>
+						<li>Do not send raw responses to clients. </li>
+						<li>Disable HTTP redirections</li>
+
+					</ul>
+				</section>
+			</section>
+
+
+		</div>
+	</div>
+
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+		});
+	</script>
+</body>
+
+</html>
